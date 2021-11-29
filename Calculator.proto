@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+service Calculator {
+    rpc Execute(CalcRequest) returns (CalcResponse) {}
+}
+
+message CalcRequest {
+    required int32 a =1;
+    required int32 b =2;
+}
+
+message CalcResponse {
+    required int32 result = 1;
+}
